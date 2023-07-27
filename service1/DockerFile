@@ -1,0 +1,16 @@
+# Use a base image suitable for your Node.js application
+FROM node:14
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy your application code to the container
+COPY service1/package.json service1/package-lock.json /app/
+RUN npm install
+
+# Copy the rest of the application files
+COPY service1 /app
+
+# Specify the command to start your service
+CMD ["npm", "start"]
+

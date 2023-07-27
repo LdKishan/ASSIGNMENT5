@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  service1:
+    build:
+      context: ./service1
+    # Add any additional configurations for this service as needed
+    # ports, environment variables, etc.
+
+  service2:
+    build:
+      context: ./service2
+    # Add any additional configurations for this service as needed
+    # ports, environment variables, etc.
+
+# Add more services here if you have additional services in your application
+
+networks:
+  # Define any custom networks needed for communication between services
+  # Example:
+  # my_network:
+  #   driver: bridge
+
+volumes:
+  # Define any volumes needed for persisting data between container restarts
+  # Example:
+  # my_volume:
+
